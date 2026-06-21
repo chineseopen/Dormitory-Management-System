@@ -1,0 +1,187 @@
+// Copyright (C) 2026 程序员-X
+// SPDX-License-Identifier: MIT
+
+/**
+ * Global stylesheet for the Dormitory Management System.
+ * Resets default browser styles, styles scrollbars and links,
+ * overrides Element Plus component themes, and defines reusable page containers.
+ *
+ * @module styles/global
+ */
+
+// Global reset: remove default margins/padding and use border-box sizing
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Base document styles: full viewport, font and background
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: $font-family;
+  font-size: $font-size-base;
+  color: $color-text-primary;
+  background-color: $color-bg-page;
+  line-height: $line-height-normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Custom thin scrollbar styling
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $color-border-dark;
+  border-radius: $border-radius-round;
+
+  &:hover {
+    background: $color-text-placeholder;
+  }
+}
+
+// Link styling with hover transition
+a {
+  color: $color-primary-light;
+  text-decoration: none;
+  transition: color $duration-fast $ease-out;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+// Responsive images
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Element Plus theme overrides
+// Primary button color scheme
+.el-button--primary {
+  --el-button-bg-color: #{$color-primary-light};
+  --el-button-border-color: #{$color-primary-light};
+  --el-button-hover-bg-color: #{$color-primary};
+  --el-button-hover-border-color: #{$color-primary};
+  --el-button-active-bg-color: #{$color-primary};
+  --el-button-active-border-color: #{$color-primary};
+}
+
+// Card: rounded corners, subtle shadow with hover elevation
+.el-card {
+  border-radius: $border-radius-md;
+  border-color: $color-border-light;
+  box-shadow: $shadow-sm;
+  transition: box-shadow $duration-base $ease-out;
+
+  &:hover {
+    box-shadow: $shadow-base;
+  }
+}
+
+// Table: borders, header background and typography
+.el-table {
+  --el-table-border-color: #{$color-border};
+  --el-table-header-bg-color: #{$color-bg-page};
+  --el-table-header-text-color: #{$color-text-regular};
+
+  th.el-table__cell {
+    font-weight: $font-weight-semibold;
+    font-size: $font-size-sm;
+  }
+}
+
+// Dialog: rounded corners and header/footer separators
+.el-dialog {
+  border-radius: $border-radius-lg;
+
+  .el-dialog__header {
+    border-bottom: 1px solid $color-border-light;
+    padding: $spacing-4 $spacing-6;
+  }
+
+  .el-dialog__footer {
+    border-top: 1px solid $color-border-light;
+    padding: $spacing-4 $spacing-6;
+  }
+}
+
+// Form label typography
+.el-form-item__label {
+  font-weight: $font-weight-medium;
+  color: $color-text-regular;
+}
+
+// Input/textarea rounded corners
+.el-input__wrapper,
+.el-textarea__inner {
+  border-radius: $border-radius-base;
+}
+
+// Reusable page container with header, card and search bar
+.page-container {
+  padding: $spacing-6;
+
+  // Page header: title on the left, actions on the right
+  .page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: $spacing-6;
+
+    .page-title {
+      font-size: $font-size-xl;
+      font-weight: $font-weight-semibold;
+      color: $color-text-primary;
+    }
+  }
+
+  // White card surface for content blocks
+  .page-card {
+    background: $color-bg-card;
+    border-radius: $border-radius-md;
+    padding: $spacing-6;
+  }
+
+  // Search bar above tables
+  .search-bar {
+    margin-bottom: $spacing-4;
+    padding: $spacing-4 $spacing-6;
+    background: $color-bg-card;
+    border-radius: $border-radius-md;
+  }
+
+  // Search form layout: flex row with wrapping and gaps
+  .search-bar .el-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-4;
+    align-items: flex-start;
+  }
+
+  .search-bar .el-form-item {
+    min-width: 180px;
+  }
+}
+
+// NProgress progress bar color override
+#nprogress .bar {
+  background: $color-accent !important;
+  height: 3px !important;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px $color-accent, 0 0 5px $color-accent !important;
+}

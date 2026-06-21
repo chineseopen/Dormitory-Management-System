@@ -1,0 +1,112 @@
+// Copyright (C) 2026 程序员-X
+// SPDX-License-Identifier: MIT
+
+/**
+ * Global SCSS design tokens for the Dormitory Management System.
+ * Defines color, spacing, typography, border-radius, shadow, animation and layout
+ * variables that are injected into every component via the Vite SCSS preprocessor.
+ *
+ * @module styles/variables
+ */
+
+// ==================== Color system ====================
+// Primary color - deep blue palette
+$color-primary: #1e40af;
+$color-primary-light: #2563eb;
+$color-primary-lighter: #3b82f6;
+$color-primary-lightest: #93c5fd;
+
+// Secondary color - sky blue
+$color-secondary: #0ea5e9;
+
+// Accent color - cyan
+$color-accent: #06b6d4;
+
+// Functional colors (success / warning / danger / info)
+$color-success: #10b981;
+$color-warning: #f59e0b;
+$color-danger: #ef4444;
+$color-info: #64748b;
+
+// Neutral text colors
+$color-text-primary: #1e293b;
+$color-text-regular: #334155;
+$color-text-secondary: #64748b;
+$color-text-placeholder: #94a3b8;
+$color-text-disabled: #cbd5e1;
+
+// Background colors
+$color-bg-page: #f0f2f5;
+$color-bg-card: #ffffff;
+$color-bg-sidebar: #0f172a;
+$color-bg-sidebar-hover: #1e293b;
+$color-bg-sidebar-active: #1e40af;
+
+// Border colors
+$color-border: #e2e8f0;
+$color-border-light: #f1f5f9;
+$color-border-dark: #cbd5e1;
+
+// ==================== Spacing system (4px base unit) ====================
+$spacing-1: 4px;
+$spacing-2: 8px;
+$spacing-3: 12px;
+$spacing-4: 16px;
+$spacing-5: 20px;
+$spacing-6: 24px;
+$spacing-8: 32px;
+$spacing-10: 40px;
+$spacing-12: 48px;
+
+// ==================== Typography system ====================
+$font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB",
+  "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// Font sizes
+$font-size-xs: 12px;
+$font-size-sm: 13px;
+$font-size-base: 14px;
+$font-size-md: 16px;
+$font-size-lg: 18px;
+$font-size-xl: 20px;
+$font-size-2xl: 24px;
+$font-size-3xl: 30px;
+
+// Font weights
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Line heights
+$line-height-tight: 1.25;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.75;
+
+// ==================== Border radius ====================
+$border-radius-sm: 4px;
+$border-radius-base: 6px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
+$border-radius-xl: 16px;
+$border-radius-round: 9999px;
+
+// ==================== Shadows ====================
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow-base: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+
+// ==================== Animations ====================
+// Easing curves and durations
+$ease-out: cubic-bezier(0.2, 0, 0, 1);
+$ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+$duration-fast: 150ms;
+$duration-base: 200ms;
+$duration-slow: 250ms;
+
+// ==================== Layout dimensions ====================
+$sidebar-width: 220px;
+$sidebar-collapsed-width: 64px;
+$navbar-height: 56px;
+$tagsview-height: 36px;

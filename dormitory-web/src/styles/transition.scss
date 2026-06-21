@@ -1,0 +1,143 @@
+// Copyright (C) 2026 程序员-X
+// SPDX-License-Identifier: MIT
+
+/**
+ * Transition animation definitions for the Dormitory Management System.
+ * Uses snappy ease-out curves for crisp, responsive motion.
+ *
+ * @module styles/transition
+ */
+
+// ==================== Transition animations ====================
+// Snappy ease-out curves: not too smooth, crisp and decisive
+
+// Page switch animation (fade + vertical slide)
+.fade-slide-enter-active {
+  transition: opacity $duration-fast $ease-out, transform $duration-fast $ease-out;
+}
+
+.fade-slide-leave-active {
+  transition: opacity $duration-fast $ease-out, transform $duration-fast $ease-out;
+}
+
+.fade-slide-enter-from {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.fade-slide-leave-to {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+// Simple fade in/out
+.fade-enter-active {
+  transition: opacity $duration-fast $ease-out;
+}
+
+.fade-leave-active {
+  transition: opacity $duration-fast $ease-out;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+// Zoom fade (scale + fade)
+.zoom-fade-enter-active {
+  transition: opacity $duration-base $ease-out, transform $duration-base $ease-out;
+}
+
+.zoom-fade-leave-active {
+  transition: opacity $duration-fast $ease-out, transform $duration-fast $ease-out;
+}
+
+.zoom-fade-enter-from {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.zoom-fade-leave-to {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+// Sidebar collapse width animation
+.sidebar-collapse-enter-active {
+  transition: width $duration-base $ease-out;
+}
+
+.sidebar-collapse-leave-active {
+  transition: width $duration-base $ease-out;
+}
+
+// List item enter/leave animation (horizontal slide)
+.list-enter-active {
+  transition: opacity $duration-base $ease-out, transform $duration-base $ease-out;
+}
+
+.list-leave-active {
+  transition: opacity $duration-fast $ease-out, transform $duration-fast $ease-out;
+}
+
+.list-enter-from {
+  opacity: 0;
+  transform: translateX(-12px);
+}
+
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(12px);
+}
+
+// List move animation (reordering)
+.list-move {
+  transition: transform $duration-base $ease-out;
+}
+
+// Slide-down expand/collapse animation
+.slide-down-enter-active {
+  transition: max-height $duration-base $ease-out, opacity $duration-base $ease-out;
+}
+
+.slide-down-leave-active {
+  transition: max-height $duration-fast $ease-out, opacity $duration-fast $ease-out;
+}
+
+.slide-down-enter-from {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.slide-down-leave-to {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+// Dialog overlay animation override (snappy)
+.el-overlay {
+  .el-dialog {
+    transition: transform $duration-base $ease-out, opacity $duration-base $ease-out;
+  }
+}
+
+// Breadcrumb item animation
+.breadcrumb-enter-active {
+  transition: opacity $duration-fast $ease-out, transform $duration-fast $ease-out;
+}
+
+.breadcrumb-leave-active {
+  transition: opacity $duration-fast $ease-out;
+}
+
+.breadcrumb-enter-from {
+  opacity: 0;
+  transform: translateX(8px);
+}
+
+.breadcrumb-leave-to {
+  opacity: 0;
+}
